@@ -19,6 +19,7 @@ function helloName( name ) {
 }
 // Remember to call the function to test
 console.log('Test expect "Hello, Madeline! ->', helloName('Madeline'));
+console.log('Test expect "Hello, Jo! ->', helloName('Jo'));
 
 
 // 3. Function to add two numbers together & return the result
@@ -26,13 +27,18 @@ function addNumbers( firstNumber, secondNumber ) {
   return firstNumber + secondNumber;
 }
 console.log('Sum expect 4 ->', addNumbers(3, 1));
+console.log('Sum expect -1 ->', addNumbers(-1000, 999));
+console.log('Sum expect 0 ->', addNumbers(0, 0));
 
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree(numberOne, numberTwo, numberThree) {
   return (numberOne * numberTwo) * numberThree;
 }
-console.log('Product expect 32 ->', multiplyThree(2, 2, 8))
+console.log('Product expect 32 ->', multiplyThree(2, 2, 8));
+console.log('Product expect 24 ->', multiplyThree(2, 4, 3));
+console.log('Product expect 0 ->', multiplyThree(0, 2, 8));
+console.log('Product expect -30 ->', multiplyThree(-2, 5, 3));
 
 
 // 5. Function that will return true if a number is positive, 
@@ -61,6 +67,7 @@ function getLast( array ) {
     return `undefined`;
   }
 }
+console.log('This is the array:', getLast(firstArray));
 console.log('This is the array:', getLast(secondArray));
 
 
