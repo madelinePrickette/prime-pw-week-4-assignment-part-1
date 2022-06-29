@@ -67,9 +67,19 @@ console.log('This is the array:', getLast(secondArray));
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
+let thirdArray = ['elephant', 'cat', 'monkey', 'chimp', 'platapus', 'lion', 'panda', 'st. bernard'];
 function find( value, array ){
-  
+  for(animal of array) {
+    if(animal === value){
+      return true;
+    } 
+  }
+  return false;
 }
+console.log('Did your guess match??', find('chimp', thirdArray)); //true
+console.log('Did your guess match??', find('elephant', thirdArray)); //true
+console.log('Did your guess match??', find('dog', thirdArray)); //false
+console.log('Did your guess match??', find('st. bernard', thirdArray)); //true
 
 // ----------------------
 // Stretch Goals
@@ -77,10 +87,20 @@ function find( value, array ){
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  console.log(string[0]); // confirmed 'a'.
+    if(letter === (string[0])) {
+      return true;
+    }
+  return false;
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
+console.log('Should say true', isFirstLetter('b', 'baboon'));
+console.log('Should say true', isFirstLetter('z', 'zebra'));
+console.log('Should say false', isFirstLetter('s', 'fish'));
+
+
+
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll( ) {
