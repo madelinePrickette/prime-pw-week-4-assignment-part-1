@@ -119,17 +119,26 @@ console.log('Sum of array should be 101:', sumAll(secondNumberArray)); // 101
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-inputNumbersArray = [-8, 21, 0, -1000, 6, 35, 240, 1, -1, -47, -790, 843, 34029];
-outputNewArray = []; // Should be [21, 6, 35, 240, 1, 843, 34029]
+let inputNumbersArray = [-8, 21, 0, -1000, 6, 35, 240, 1, -1, -47, -790, 843, 34029];
+let inputEmptyArray = [];
+let outputNewArray = []; // Should be [21, 6, 35, 240, 1, 843, 34029] then [].
 function onlyPositive( array ) {
-  for(i=0; i<array.length; i++) {
-    if(i>0) {
-      outputNewArray.push[i];
+  for(let i=0; i<array.length; i++) {
+    if(array[i]>0) {
+      outputNewArray.push(array[i]);
     }
+    // else {
+    //   outputNewArray = [];   THIS MAKES BOTH ARRAYS [843, 34029] WHY?!
+    // }
   }
+  // outputNewArray = []; // This obviously doesnt work but where am i supposed to put the else statement???
+  // I wanted to empty the array somewhere but it messes with the other answer...
   return outputNewArray;
 }
-console.log('this should be an array of only pos #s:', onlyPositive(inputNumbersArray));
+console.log('this should be an array of only pos #s:', onlyPositive(inputNumbersArray)); // Works perfectly fine
+// Until I try an empty string. The empty string returns the same values.
+console.log('this should be an array of only pos #s:', onlyPositive(inputEmptyArray));
+// This question literally drove me crazy, if you have any notes, I would greatly appreciate it.
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
