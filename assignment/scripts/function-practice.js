@@ -144,7 +144,7 @@ function onlyPositive( array ) {
 }
 console.log('this should be an array of only pos #s:', onlyPositive(inputNumbersArray)); // Works perfectly fine
 // Until I try an empty string. The empty string returns the same values.
-console.log('this should be an array of only pos #s:', onlyPositive(inputEmptyArray));
+console.log('this should be an empty array:', onlyPositive(inputEmptyArray));
 // This question literally drove me crazy, if you have any notes, I would greatly appreciate it.
 
 
