@@ -67,8 +67,8 @@ function getLast( array ) {
     return `undefined`;
   }
 }
-console.log('This is the array:', getLast(firstArray));
-console.log('This is the array:', getLast(secondArray));
+console.log('Should be Rex begonia:', getLast(firstArray));
+console.log('Should be undefined:', getLast(secondArray));
 
 
 // 7. Function to find a value in an array. Return true if the 
@@ -83,10 +83,10 @@ function find( value, array ){
   }
   return false;
 }
-console.log('Did your guess match??', find('chimp', thirdArray)); //true
-console.log('Did your guess match??', find('elephant', thirdArray)); //true
-console.log('Did your guess match??', find('dog', thirdArray)); //false
-console.log('Did your guess match??', find('st. bernard', thirdArray)); //true
+console.log('Did your guess match?? should be true', find('chimp', thirdArray)); //true
+console.log('Did your guess match?? should be true', find('elephant', thirdArray)); //true
+console.log('Did your guess match?? should be false', find('dog', thirdArray)); //false
+console.log('Did your guess match?? should be true', find('st. bernard', thirdArray)); //true
 
 
 // ----------------------
