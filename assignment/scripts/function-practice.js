@@ -81,6 +81,7 @@ console.log('Did your guess match??', find('elephant', thirdArray)); //true
 console.log('Did your guess match??', find('dog', thirdArray)); //false
 console.log('Did your guess match??', find('st. bernard', thirdArray)); //true
 
+
 // ----------------------
 // Stretch Goals
 // ----------------------
@@ -100,19 +101,35 @@ console.log('Should say true', isFirstLetter('z', 'zebra'));
 console.log('Should say false', isFirstLetter('s', 'fish'));
 
 
-
-
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
+numberArray = [ 5, 6, 4, 9, 7, 1, 2, 8, 3] // Should be 45 (all sudoku numbers added up lol)
+secondNumberArray = [40, 10, 25, 5, 15, 5, 1] // Should be 101.
+function sumAll( array ) {
   let sum = 0
+  for(i=0; i<array.length; i++) {
+    sum += array[i];
+  }
   // TODO: loop to add items
   return sum;
 }
+console.log('Sum of array should be 45:', sumAll(numberArray)); // 45
+console.log('Sum of array should be 101:', sumAll(secondNumberArray)); // 101
+
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-
+inputNumbersArray = [-8, 21, 0, -1000, 6, 35, 240, 1, -1, -47, -790, 843, 34029];
+outputNewArray = []; // Should be [21, 6, 35, 240, 1, 843, 34029]
+function onlyPositive( array ) {
+  for(i=0; i<array.length; i++) {
+    if(i>0) {
+      outputNewArray.push[i];
+    }
+  }
+  return outputNewArray;
+}
+console.log('this should be an array of only pos #s:', onlyPositive(inputNumbersArray));
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
